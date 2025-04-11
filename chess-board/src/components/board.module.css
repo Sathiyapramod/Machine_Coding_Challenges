@@ -1,0 +1,53 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: min(90vw, 100vh - 160px);
+  height: min(90vw, 100vh - 160px);
+}
+
+.board div {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.board div button.box {
+  flex-grow: 1;
+  border: 0.5px solid;
+  display: flex;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+}
+
+.row {
+  display: flex;
+  border: 0.5px solid;
+}
+
+.board div:nth-child(odd) > button:nth-child(even) {
+  background-color: black;
+}
+
+.board div:nth-child(even) > button:nth-child(odd) {
+  background-color: black;
+}
+
+.board div button.box.selected {
+  transition: background-color 0.33s;
+  background-color: red;
+  border: none;
+}
+
+.box {
+  display: flex;
+  flex-grow: 1;
+  border: none;
+}
+
+.board div button.box.clicked {
+  transition: background-color 0.33s;
+  background-color: darkred;
+  border: none;
+}
