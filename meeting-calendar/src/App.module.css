@@ -1,0 +1,118 @@
+.hours {
+  margin-left: 16px;
+  display: flex;
+  width: 7ch;
+  flex-direction: column;
+}
+
+.formInputs {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  align-items: center;
+}
+
+.inputBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+  margin-bottom: 16px;
+}
+
+.day {
+  position: relative;
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100%-32px);
+}
+
+input {
+  padding: 3px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  gap: 2rem;
+}
+.layout button {
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+.holder {
+  display: flex;
+  width: calc(100dvw - 9rem);
+  height: calc(100dvh - 9rem);
+  justify-self: center;
+  padding: 32px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+.holder .hourLabels {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+  justify-content: space-between;
+  width: 8ch;
+}
+.holder .day {
+  position: relative;
+  margin-top: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 1rem);
+  border-bottom: 1px solid #ccc;
+}
+.holder .day .hourSlot {
+  border-top: 1px solid #ccc;
+}
+.holder .day .meetings {
+  display: flex;
+  justify-content: flex-end;
+}
+.holder .day .meeting {
+  position: absolute;
+  opacity: 0.8;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: rgb(134, 198, 219);
+  outline: 1px solid white;
+  border: 1px solid gray;
+  transition: background-color 0.5s;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px;
+  font-size: small;
+}
+.holder .day .meeting span:first-child {
+  font-weight: bold;
+}
+.holder .day .meeting:focus {
+  background-color: rgb(57, 196, 243);
+  z-index: 1;
+}
+
+@media (width > 768px) {
+  .holder .day .meeting {
+    font-size: medium;
+  }
+}
+@media (width > 1200px) {
+  .holder .day .meeting {
+    font-size: large;
+  }
+}
