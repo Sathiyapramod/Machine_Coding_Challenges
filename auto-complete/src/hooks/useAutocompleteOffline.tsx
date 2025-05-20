@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import Trie from "../trie";
+import Trie from "../utils/trie";
 
 type AutoCompleteReturnType = {
   userText: string;

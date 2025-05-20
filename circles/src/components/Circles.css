@@ -1,0 +1,15 @@
+.box {
+  border: 8px solid;
+  position: relative;
+  margin: 16px auto;
+  box-sizing: content-box;
+}
+
+.circle {
+  border-radius: 50%;
+  border: 2px solid red;
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
